@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Varela+Round&display=swap");
+
+/* base layer styles */
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply font-noto;
+    @apply text-lg;
+  }
 }
