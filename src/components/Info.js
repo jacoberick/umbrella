@@ -1,4 +1,4 @@
-const Info = () => {
+const Info = ({ createUmbrella }) => {
   const umbrellaTag = (
     <span className="uppercase font-varela text-yellow-300">umbrella</span>
   );
@@ -12,7 +12,10 @@ const Info = () => {
         {umbrellaTag} algorithm.
       </p>
       <p className="mt-4">No two generations are the same. Enjoy.</p>
-      <button className="w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition">
+      <button
+        onClick={createUmbrella}
+        className="w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition"
+      >
         <p className="text-base">Generate</p>
       </button>
     </div>
