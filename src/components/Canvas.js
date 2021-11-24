@@ -50,7 +50,7 @@ const Canvas = () => {
         }
         if (x.type === "line") {
           p5.stroke("#121212")
-            .strokeWeight(getRandNum(1, 100))
+            .strokeWeight(getRandNum(1, 50))
             .line(
               getRandNum(0, 750),
               getRandNum(0, 1000),
