@@ -3,18 +3,21 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
+  // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
+  // state that holds types and quantities of shapes to be painted on canvas
   const [values, setValues] = useState([
     { type: "circle", count: getRandNum(0, 10) },
     { type: "rectangle", count: getRandNum(0, 10) },
     { type: "line", count: getRandNum(0, 10) },
   ]);
 
+  // better way to reset canvas needs to be made here
   const createUmbrella = () => {
     window.location.reload();
   };
@@ -25,6 +28,7 @@ const Canvas = () => {
     p5.noStroke();
   };
 
+  // returns random number between 0 and 256
   const getRandCol = () => {
     return getRandNum(0, 256);
   };
