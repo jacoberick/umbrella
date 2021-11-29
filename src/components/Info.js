@@ -1,10 +1,17 @@
-const Info = ({ createUmbrella }) => {
+import Sketch from "react-p5";
+
+const Info = () => {
   const umbrellaTag = (
     <span className="uppercase font-varela text-yellow-300">umbrella</span>
   );
 
   const buttonStyles =
     "w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition";
+
+  // better way to reset canvas needs to be made here
+  const createUmbrella = () => {
+    window.location.reload();
+  };
 
   return (
     <div className="ml-20 text-white font-noto">

@@ -3,6 +3,8 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
+  let cnv;
+
   // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
@@ -16,11 +18,6 @@ const Canvas = () => {
     { type: "rectangle", count: getRandNum(0, 10) },
     { type: "line", count: getRandNum(0, 10) },
   ]);
-
-  // better way to reset canvas needs to be made here
-  const createUmbrella = () => {
-    window.location.reload();
-  };
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(750, 1000).parent(canvasParentRef);
@@ -69,7 +66,7 @@ const Canvas = () => {
   return (
     <div className="mx-auto max-w-7xl flex justify-center mt-20">
       <Sketch setup={setup} draw={draw} />
-      <Info createUmbrella={createUmbrella} />
+      <Info />
     </div>
   );
 };
