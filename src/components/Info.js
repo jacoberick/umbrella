@@ -3,6 +3,9 @@ const Info = ({ createUmbrella }) => {
     <span className="uppercase font-varela text-yellow-300">umbrella</span>
   );
 
+  const buttonStyles =
+    "w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition";
+
   return (
     <div className="ml-20 text-white font-noto">
       <h1>Welcome to {umbrellaTag}.</h1>
@@ -12,12 +15,10 @@ const Info = ({ createUmbrella }) => {
         {umbrellaTag} algorithm.
       </p>
       <p className="mt-4">No two generations are the same. Enjoy.</p>
-      <button
-        onClick={createUmbrella}
-        className="w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition"
-      >
+      <button onClick={createUmbrella} className={buttonStyles}>
         <p className="text-base">Generate</p>
       </button>
+      <button className={buttonStyles}>Download Image</button>
     </div>
   );
 };
