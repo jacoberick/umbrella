@@ -1,12 +1,10 @@
 import Sketch from "react-p5";
 
 const Info = () => {
-  const umbrellaTag = (
-    <span className="uppercase font-varela text-yellow-300">umbrella</span>
-  );
+  const umbrellaTag = <span className="uppercase font-varela">umbrella</span>;
 
   const buttonStyles =
-    "w-full mt-8 border-white border-2 py-2 rounded hover:border-yellow-300 hover:text-yellow-300 transition";
+    "w-full mt-8 border-black border-2 py-2 rounded hover:border-white hover:text-white transition";
 
   // better way to reset canvas needs to be made here
   const createUmbrella = () => {
@@ -14,7 +12,7 @@ const Info = () => {
   };
 
   return (
-    <div className="ml-20 text-white font-noto">
+    <div className="ml-20 text-black font-noto">
       <h1>Welcome to {umbrellaTag}.</h1>
       <p className="mt-8">An experiment in generative art.</p>
       <p className="mt-4">

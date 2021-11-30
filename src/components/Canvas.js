@@ -31,7 +31,7 @@ const Canvas = () => {
   };
 
   const draw = (p5) => {
-    p5.background("#fefefe");
+    p5.background("#121212");
 
     //circles
     values.forEach((x) => {
@@ -50,7 +50,7 @@ const Canvas = () => {
           p5.fill(aCol, bCol, cCol).rect(xCord, yCord, dia);
         }
         if (x.type === "line") {
-          p5.stroke("#121212")
+          p5.stroke("#fefefe")
             .strokeWeight(getRandNum(1, 50))
             .line(
               getRandNum(0, 750),
