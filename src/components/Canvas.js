@@ -3,8 +3,6 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
-  let cnv;
-
   // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
@@ -36,7 +34,6 @@ const Canvas = () => {
     //circles
     values.forEach((x) => {
       for (let i = 0; i <= x.count; i++) {
-        console.log(i);
         let xCord = getRandNum(0, 750);
         let yCord = getRandNum(0, 1000);
         let aCol = getRandCol();
