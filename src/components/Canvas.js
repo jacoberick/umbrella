@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
+  let windowWidth = window.innerWidth;
+  window.addEventListener("resize", () => (windowWidth = window.innerWidth));
+  console.log(windowWidth);
   // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
@@ -62,7 +65,7 @@ const Canvas = () => {
 
   return (
     <div className="mx-auto max-w-7xl flex justify-center mt-20">
-      <Sketch setup={setup} draw={draw} />
+      <Sketch className="px-10" setup={setup} draw={draw} />
       <Info />
     </div>
   );

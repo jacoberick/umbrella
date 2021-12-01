@@ -14,7 +14,7 @@ const Info = () => {
   const saveUmbrella = () => {
     const dlLink = document.getElementById("downloadLink");
     let cnv = document.getElementById("defaultCanvas0");
-    dlLink.href = cnv.toDataURL("image/jpg");
+    dlLink.href = cnv.toDataURL("umbrella/jpg");
   };
 
   return (
