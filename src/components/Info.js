@@ -29,7 +29,12 @@ const Info = () => {
       <button onClick={newCanvas} className={buttonStyles}>
         <p className="text-base">Generate</p>
       </button>
-      <a id="downloadLink" href="" onClick={saveUmbrella} download="image.jpg">
+      <a
+        id="downloadLink"
+        href=""
+        onClick={saveUmbrella}
+        download="umbrella.jpg"
+      >
         <button className={buttonStyles}>Download Image</button>
       </a>
     </div>

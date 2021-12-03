@@ -12,9 +12,9 @@ const Canvas = () => {
 
   // state that holds types and quantities of shapes to be painted on canvas
   const [values, setValues] = useState([
-    { type: "circle", count: getRandNum(0, 10) },
-    { type: "rectangle", count: getRandNum(0, 10) },
-    { type: "line", count: getRandNum(0, 10) },
+    { type: "circle", count: getRandNum(0, 25) },
+    { type: "rectangle", count: getRandNum(0, 25) },
+    { type: "line", count: getRandNum(0, 25) },
   ]);
 
   let width = window.innerWidth * 0.3;
@@ -27,6 +27,8 @@ const Canvas = () => {
 
     function windowResized() {
       p5.resizeCanvas(width, height);
+      p5.noLoop();
+      p5.noStroke();
     }
 
     window.addEventListener("resize", () => windowResized());
@@ -48,7 +50,7 @@ const Canvas = () => {
         let aCol = getRandCol();
         let bCol = getRandCol();
         let cCol = getRandCol();
-        let dia = getRandNum(1, 25);
+        let dia = getRandNum(1, 55);
         if (x.type === "circle") {
           p5.fill(aCol, bCol, cCol).circle(xCord, yCord, dia);
         }
