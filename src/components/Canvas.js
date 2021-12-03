@@ -3,8 +3,9 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
-  let width = window.innerWidth * 0.3;
-  let height = window.innerHeight * 0.75;
+  let canvasWidth = window.innerWidth * 0.3;
+  let canvasHeight = canvasWidth + canvasWidth * 0.4;
+
   // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
@@ -19,25 +20,23 @@ const Canvas = () => {
     { type: "line", count: getRandNum(0, 25) },
   ]);
 
-  window.addEventListener("resize", () => updateWidthHeight());
-  const updateWidthHeight = () => {
-    if (window.innerWidth > 1000) {
-      width = window.innerWidth * 0.3;
-      height = window.innerHeight * 0.75;
-    }
-  };
-
   const setup = (p5, canvasParentRef) => {
-    p5.createCanvas(width, height).parent(canvasParentRef);
+    p5.createCanvas(canvasWidth, canvasHeight).parent(canvasParentRef);
     p5.noLoop();
     p5.noStroke();
 
     function windowResized() {
-      p5.resizeCanvas(width, height);
+      p5.resizeCanvas(canvasWidth, canvasHeight);
       p5.noStroke();
     }
 
-    window.addEventListener("resize", () => windowResized());
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1500 && canvasWidth !== window.innerWidth * 0.3) {
+        canvasWidth = window.innerWidth * 0.3;
+        canvasHeight = canvasWidth + canvasWidth * 0.4;
+        windowResized();
+      }
+    });
   };
 
   // returns random number between 0 and 256
@@ -51,8 +50,8 @@ const Canvas = () => {
     //circles
     values.forEach((x) => {
       for (let i = 0; i <= x.count; i++) {
-        let xCord = getRandNum(0, width);
-        let yCord = getRandNum(0, height);
+        let xCord = getRandNum(0, canvasWidth);
+        let yCord = getRandNum(0, canvasHeight);
         let aCol = getRandCol();
         let bCol = getRandCol();
         let cCol = getRandCol();
@@ -67,9 +66,9 @@ const Canvas = () => {
           p5.stroke("#fefefe")
             .strokeWeight(getRandNum(1, 10))
             .line(
-              getRandNum(0, 750),
-              getRandNum(0, 1000),
-              getRandNum(0, 750),
+              getRandNum(0, canvasWidth),
+              getRandNum(0, canvasHeight),
+              getRandNum(0, canvasWidth),
               getRandNum(0, 1000)
             );
         }
