@@ -3,6 +3,8 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
+  let width = window.innerWidth * 0.3;
+  let height = window.innerHeight * 0.75;
   // returns random number between min and max params
   const getRandNum = (min, max) => {
     min = Math.ceil(min);
@@ -17,8 +19,13 @@ const Canvas = () => {
     { type: "line", count: getRandNum(0, 25) },
   ]);
 
-  let width = window.innerWidth * 0.3;
-  let height = window.innerHeight * 0.75;
+  window.addEventListener("resize", () => updateWidthHeight());
+  const updateWidthHeight = () => {
+    if (window.innerWidth > 1000) {
+      width = window.innerWidth * 0.3;
+      height = window.innerHeight * 0.75;
+    }
+  };
 
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(width, height).parent(canvasParentRef);
@@ -27,7 +34,6 @@ const Canvas = () => {
 
     function windowResized() {
       p5.resizeCanvas(width, height);
-      p5.noLoop();
       p5.noStroke();
     }
 
