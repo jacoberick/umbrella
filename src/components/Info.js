@@ -14,11 +14,11 @@ const Info = () => {
   const saveUmbrella = () => {
     const dlLink = document.getElementById("downloadLink");
     let cnv = document.getElementById("defaultCanvas0");
-    dlLink.href = cnv.toDataURL("umbrella/jpg");
+    dlLink.href = cnv.toDataURL("image/png");
   };
 
   return (
-    <div className="ml-10 px-10 text-black font-noto">
+    <div className="ml-10 px-10 text-black font-noto max-w-xl">
       <h1>Welcome to {umbrellaTag}.</h1>
       <p className="mt-8">An experiment in generative art.</p>
       <p className="mt-4">
@@ -29,12 +29,7 @@ const Info = () => {
       <button onClick={newCanvas} className={buttonStyles}>
         <p className="text-base">Generate</p>
       </button>
-      <a
-        id="downloadLink"
-        href=""
-        onClick={saveUmbrella}
-        download="umbrella.jpg"
-      >
+      <a id="downloadLink" href="" onClick={saveUmbrella} download="umbrella">
         <button className={buttonStyles}>Download Image</button>
       </a>
     </div>

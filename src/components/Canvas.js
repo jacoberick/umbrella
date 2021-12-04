@@ -21,6 +21,7 @@ const Canvas = () => {
   ]);
 
   const setup = (p5, canvasParentRef) => {
+    p5.pixelDensity(10);
     p5.createCanvas(canvasWidth, canvasHeight).parent(canvasParentRef);
     p5.noLoop();
     p5.noStroke();
