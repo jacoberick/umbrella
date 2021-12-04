@@ -16,8 +16,8 @@ const Canvas = () => {
   // state that holds types and quantities of shapes to be painted on canvas
   const [values, setValues] = useState([
     { type: "rectangle", count: 5000 },
-    { type: "circle", count: getRandNum(0, 25) },
-    { type: "line", count: getRandNum(0, 200) },
+    { type: "line", count: getRandNum(50, 250) },
+    { type: "circle", count: getRandNum(50, 125) },
   ]);
 
   const setup = (p5, canvasParentRef) => {
@@ -48,7 +48,7 @@ const Canvas = () => {
       for (let i = 0; i <= x.count; i++) {
         let xCord = getRandNum(0, canvasWidth);
         let yCord = getRandNum(0, canvasHeight);
-        let wormXCord = getRandNum(0, canvasWidth);
+        let towerXCord = getRandNum(0, canvasWidth);
         let rectWidth = getRandNum(5, 15);
         let rectHeight = getRandNum(20, 30);
 
@@ -58,20 +58,17 @@ const Canvas = () => {
             getRandNum(0, 256),
             getRandNum(0, 256)
           ).rect(xCord, yCord, rectWidth, rectHeight);
-        } else if (x.type === "circle") {
-          p5.fill("#fefefe").circle(
-            getRandNum(0, canvasWidth),
-            getRandNum(0, canvasHeight),
-            getRandNum(30, 75)
-          );
         } else if (x.type === "line") {
-          p5.stroke("#121212")
+          p5.stroke("rgba(0, 0, 0, .75)")
             .strokeWeight(getRandNum(5, 10))
-            .line(
-              wormXCord,
-              canvasHeight,
-              wormXCord,
-              getRandNum(0, canvasHeight)
+            .line(towerXCord, 0, towerXCord, getRandNum(0, canvasHeight));
+        } else if (x.type === "circle") {
+          p5.fill("rgba(255, 255, 255, .75)")
+            .strokeWeight(0)
+            .circle(
+              getRandNum(0, canvasWidth),
+              getRandNum(0, canvasHeight * 0.75),
+              1.5
             );
         }
       }
