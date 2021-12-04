@@ -16,8 +16,8 @@ const Canvas = () => {
   // state that holds types and quantities of shapes to be painted on canvas
   const [values, setValues] = useState([
     { type: "rectangle", count: 5000 },
-    { type: "circle", count: getRandNum(0, 5000) },
-    { type: "line", count: getRandNum(0, 100) },
+    { type: "circle", count: getRandNum(0, 25) },
+    { type: "line", count: getRandNum(0, 200) },
   ]);
 
   const setup = (p5, canvasParentRef) => {
@@ -61,7 +61,7 @@ const Canvas = () => {
           p5.fill("#fefefe").circle(
             getRandNum(0, canvasWidth),
             getRandNum(0, canvasHeight),
-            getRandNum(1, 10)
+            getRandNum(30, 75)
           );
         } else if (x.type === "line") {
           p5.stroke("#121212")

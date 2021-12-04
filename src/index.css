@@ -14,6 +14,6 @@
 
   p {
     @apply font-noto;
-    @apply text-lg;
+    @apply text-base;
   }
 }
