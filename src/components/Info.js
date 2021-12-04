@@ -1,5 +1,3 @@
-import Sketch from "react-p5";
-
 const Info = () => {
   const umbrellaTag = <span className="uppercase font-varela">umbrella</span>;
 
@@ -29,7 +27,7 @@ const Info = () => {
       <button onClick={newCanvas} className={buttonStyles}>
         <p className="text-base">Generate</p>
       </button>
-      <a id="downloadLink" href="" onClick={saveUmbrella} download="umbrella">
+      <a id="downloadLink" href="/" onClick={saveUmbrella} download="umbrella">
         <button className={buttonStyles}>Download Image</button>
       </a>
     </div>

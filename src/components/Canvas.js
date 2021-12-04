@@ -3,7 +3,7 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
-  let canvasWidth = window.innerWidth * 0.3;
+  let canvasWidth = window.innerWidth > 1500 ? window.innerWidth * 0.3 : 450;
   let canvasHeight = canvasWidth + canvasWidth * 0.4;
 
   // returns random number between min and max params
@@ -14,7 +14,7 @@ const Canvas = () => {
   };
 
   // state that holds types and quantities of shapes to be painted on canvas
-  const [values, setValues] = useState([
+  const [values] = useState([
     { type: "rectangle", count: 5000 },
     { type: "line", count: getRandNum(50, 250) },
     { type: "circle", count: getRandNum(50, 125) },
