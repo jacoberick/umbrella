@@ -15,9 +15,9 @@ const Canvas = () => {
 
   // state that holds types and quantities of shapes to be painted on canvas
   const [values, setValues] = useState([
-    { type: "circle", count: getRandNum(0, 25) },
-    { type: "rectangle", count: getRandNum(0, 25) },
-    { type: "line", count: getRandNum(0, 25) },
+    { type: "rectangle", count: 5000 },
+    { type: "circle", count: getRandNum(0, 5000) },
+    { type: "line", count: getRandNum(0, 100) },
   ]);
 
   const setup = (p5, canvasParentRef) => {
@@ -39,11 +39,6 @@ const Canvas = () => {
     });
   };
 
-  // returns random number between 0 and 256
-  const getRandCol = () => {
-    return getRandNum(0, 256);
-  };
-
   const draw = (p5) => {
     p5.background("#121212");
 
@@ -52,24 +47,30 @@ const Canvas = () => {
       for (let i = 0; i <= x.count; i++) {
         let xCord = getRandNum(0, canvasWidth);
         let yCord = getRandNum(0, canvasHeight);
-        let aCol = getRandCol();
-        let bCol = getRandCol();
-        let cCol = getRandCol();
-        let dia = getRandNum(1, 55);
-        if (x.type === "circle") {
-          p5.fill(aCol, bCol, cCol).circle(xCord, yCord, dia);
-        }
+        let wormXCord = getRandNum(0, canvasWidth);
+        let rectWidth = getRandNum(5, 15);
+        let rectHeight = getRandNum(20, 30);
+
         if (x.type === "rectangle") {
-          p5.fill(aCol, bCol, cCol).rect(xCord, yCord, dia);
-        }
-        if (x.type === "line") {
-          p5.stroke("#fefefe")
-            .strokeWeight(getRandNum(1, 10))
+          p5.fill(
+            getRandNum(0, 256),
+            getRandNum(0, 256),
+            getRandNum(0, 256)
+          ).rect(xCord, yCord, rectWidth, rectHeight);
+        } else if (x.type === "circle") {
+          p5.fill("#fefefe").circle(
+            getRandNum(0, canvasWidth),
+            getRandNum(0, canvasHeight),
+            getRandNum(1, 10)
+          );
+        } else if (x.type === "line") {
+          p5.stroke("#121212")
+            .strokeWeight(getRandNum(5, 10))
             .line(
-              getRandNum(0, canvasWidth),
-              getRandNum(0, canvasHeight),
-              getRandNum(0, canvasWidth),
-              getRandNum(0, 1000)
+              wormXCord,
+              canvasHeight,
+              wormXCord,
+              getRandNum(0, canvasHeight)
             );
         }
       }
