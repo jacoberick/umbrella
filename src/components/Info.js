@@ -1,5 +1,7 @@
 const Info = () => {
-  const umbrellaTag = <span className="uppercase font-varela">umbrella</span>;
+  const umbrellaTag = (
+    <span className="uppercase font-varela animate-rainbowFlash">umbrella</span>
+  );
 
   const buttonStyles =
     "w-full mt-8 border-black border-2 py-2 rounded hover:border-white hover:text-white transition";
