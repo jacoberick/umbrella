@@ -18,7 +18,7 @@ const Canvas = () => {
 
   // state that holds types and quantities of shapes to be painted on canvas
   const [values] = useState([
-    { type: "rectangle", count: 5000 },
+    { type: "rectangle", count: 100000 },
     { type: "line", count: getRandNum(50, 250) },
     { type: "circle", count: getRandNum(50, 125) },
   ]);
@@ -55,8 +55,8 @@ const Canvas = () => {
         let xCord = getRandNum(0, canvasWidth);
         let yCord = getRandNum(0, canvasHeight);
         let towerXCord = getRandNum(0, canvasWidth);
-        let rectWidth = getRandNum(5, 15);
-        let rectHeight = getRandNum(20, 30);
+        let rectWidth = 2;
+        let rectHeight = 4;
 
         if (x.type === "rectangle") {
           p5.fill(
@@ -65,7 +65,7 @@ const Canvas = () => {
             getRandNum(0, 256)
           ).rect(xCord, yCord, rectWidth, rectHeight);
         } else if (x.type === "line") {
-          p5.stroke("rgba(0, 0, 0, .75)")
+          p5.stroke("rgba(0, 0, 0, .8)")
             .strokeWeight(getRandNum(5, 10))
             .line(towerXCord, 0, towerXCord, getRandNum(0, canvasHeight));
         } else if (x.type === "circle") {
