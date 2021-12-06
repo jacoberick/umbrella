@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+        hardline: "-5px 5px #121212",
+      },
       keyframes: {
         rainbowFlash: {
           "0%": { color: "#FF0000" },
@@ -25,12 +28,11 @@ module.exports = {
         b675: { max: "675px" },
       },
       colors: {
-        main: "#007d6a",
         black: "#121212",
       },
       fontFamily: {
-        noto: ["Noto Serif", "serif"],
-        varela: ["Raleway", "sans-serif"],
+        source: ["Source Sans Pro", "sans-serif"],
+        maven: ["Maven Pro", "sans-serif"],
       },
     },
   },

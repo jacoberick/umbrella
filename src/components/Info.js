@@ -1,14 +1,14 @@
 const Info = () => {
   const umbrellaTag = (
-    <span className="uppercase font-varela animate-rainbowFlash">umbrella</span>
+    <span className="uppercase font-maven animate-rainbowFlash">umbrella</span>
   );
 
   const buttonStyles =
-    "w-full mt-8 border-black border-2 py-2 rounded hover:bg-black hover:text-white transition";
+    "w-full mb-8 border-2 py-2 hover:shadow-hardline transition rounded-sm duration-200 border-black text-black";
 
-  const descriptionStyle = "mt-4 b850:text-sm b750:text-xs";
+  const descriptionStyle = "b850:text-sm b750:text-xs";
 
-  const buttonPTags = "b850:text-sm b750:text-xs";
+  const buttonPTags = "b850:text-sm b750:text-xs font-source uppercase";
 
   // better way to reset canvas needs to be made here
   const newCanvas = () => {
@@ -22,23 +22,36 @@ const Info = () => {
   };
 
   return (
-    <div className="pl-10 b675:pl-0 text-black font-noto max-w-xl b675:mt-6">
-      <h1 className="b1000:text-2xl b750:text-xl">Welcome to {umbrellaTag}.</h1>
-      <p className={descriptionStyle}>An experiment in generative art.</p>
-      <p className={descriptionStyle}>
-        Press the Generate button to create an art piece through the{" "}
-        {umbrellaTag} algorithm.
-      </p>
-      <p className={`${descriptionStyle}`}>
-        No two generations are the same. Enjoy.
-      </p>
-      <a href="/" target="_blank">
-        <p
-          className={`${descriptionStyle} text-blue-800 hover:underline inline-block`}
-        >
-          10 piece collection available on OpenSea.
+    <div className="ml-10 b675:pl-0 text-black font-source max-w-xl b675:mt-6">
+      <div className="">
+        <h1 className="b1000:text-2xl b750:text-xl mb-8">
+          Welcome to {umbrellaTag}.
+        </h1>
+        <p className={descriptionStyle}>
+          An experiment in generative art created by{" "}
+          <a
+            className="text-blue-800 hover:underline uppercase"
+            href="https://gulaganthem.com"
+            target="_blank"
+          >
+            gulag anthem
+          </a>
+          .
         </p>
-      </a>
+        <p className={descriptionStyle}>
+          Press the <span className="uppercase">Generate</span> button to create
+          an art piece through the {umbrellaTag} algorithm. No two generations
+          are the same. Enjoy.
+        </p>
+        <a href="/" target="_blank">
+          <p
+            className={`${descriptionStyle} text-blue-800 hover:underline inline-block my-8`}
+          >
+            10 piece NFT collection available on OpenSea.
+          </p>
+        </a>
+      </div>
+
       <button onClick={newCanvas} className={buttonStyles}>
         <p className={buttonPTags}>Generate</p>
       </button>

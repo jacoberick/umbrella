@@ -4,16 +4,16 @@
 @tailwind utilities;
 
 /* fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Source+Sans+Pro&display=swap");
 
 /* base layer styles */
 @layer base {
   h1 {
-    @apply text-3xl;
+    @apply text-7xl;
   }
 
   p {
-    @apply font-noto;
-    @apply text-base;
+    @apply font-source;
+    @apply text-lg;
   }
 }
