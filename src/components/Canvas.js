@@ -3,7 +3,10 @@ import Sketch from "react-p5";
 import Info from "./Info";
 
 const Canvas = () => {
-  let canvasWidth = window.innerWidth > 1500 ? window.innerWidth * 0.3 : 450;
+  let canvasWidth =
+    window.innerWidth > 675
+      ? window.innerWidth * 0.3
+      : window.innerWidth * 0.75;
   let canvasHeight = canvasWidth + canvasWidth * 0.4;
 
   // returns random number between min and max params
@@ -32,8 +35,11 @@ const Canvas = () => {
     }
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 1500 && canvasWidth !== window.innerWidth * 0.3) {
-        canvasWidth = window.innerWidth * 0.3;
+      if (canvasWidth !== window.innerWidth * 0.3) {
+        canvasWidth =
+          window.innerWidth > 675
+            ? window.innerWidth * 0.3
+            : window.innerWidth * 0.75;
         canvasHeight = canvasWidth + canvasWidth * 0.4;
         windowResized();
       }
@@ -76,8 +82,11 @@ const Canvas = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl flex justify-center mt-14">
-      <Sketch className="px-10" setup={setup} draw={draw} />
+    <div
+      id="canvasContainer"
+      className="mx-auto flex justify-center mt-14 px-20 b675:flex-col"
+    >
+      <Sketch className="pr-10 b675:pr-0" setup={setup} draw={draw} />
       <Info />
     </div>
   );

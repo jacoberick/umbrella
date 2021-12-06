@@ -4,7 +4,11 @@ const Info = () => {
   );
 
   const buttonStyles =
-    "w-full mt-8 border-black border-2 py-2 rounded hover:border-white hover:text-white transition";
+    "w-full mt-8 border-black border-2 py-2 rounded hover:bg-black hover:text-white transition";
+
+  const descriptionStyle = "mt-4 b850:text-sm b750:text-xs";
+
+  const buttonPTags = "b850:text-sm b750:text-xs";
 
   // better way to reset canvas needs to be made here
   const newCanvas = () => {
@@ -18,19 +22,23 @@ const Info = () => {
   };
 
   return (
-    <div className="ml-10 px-10 text-black font-noto max-w-xl">
-      <h1>Welcome to {umbrellaTag}.</h1>
-      <p className="mt-8">An experiment in generative art.</p>
-      <p className="mt-4">
+    <div className="pl-10 b675:pl-0 text-black font-noto max-w-xl b675:mt-12">
+      <h1 className="b1000:text-2xl b750:text-xl">Welcome to {umbrellaTag}.</h1>
+      <p className={descriptionStyle}>An experiment in generative art.</p>
+      <p className={descriptionStyle}>
         Press the Generate button to create an art piece through the{" "}
         {umbrellaTag} algorithm.
       </p>
-      <p className="mt-4">No two generations are the same. Enjoy.</p>
+      <p className={descriptionStyle}>
+        No two generations are the same. Enjoy.
+      </p>
       <button onClick={newCanvas} className={buttonStyles}>
-        <p className="text-base">Generate</p>
+        <p className={buttonPTags}>Generate</p>
       </button>
       <a id="downloadLink" href="/" onClick={saveUmbrella} download="umbrella">
-        <button className={buttonStyles}>Download Image</button>
+        <button className={buttonStyles}>
+          <p className={buttonPTags}>Download Image</p>
+        </button>
       </a>
     </div>
   );

@@ -19,14 +19,10 @@ module.exports = {
         rainbowFlash: "rainbowFlash 3s infinite linear",
       },
       screens: {
-        bOne: { max: "1000px" },
-        bTwo: { max: "902px" },
-        bThree: { max: "750px" },
-        bFour: { max: "600px" },
-        bFive: { max: "500px" },
-        bFivePFive: { max: "450px" },
-        bFourSevenFive: { max: "350px" },
-        bSix: { max: "300px" },
+        b1000: { max: "1000px" },
+        b850: { max: "850px" },
+        b750: { max: "750px" },
+        b675: { max: "675px" },
       },
       colors: {
         main: "#007d6a",
