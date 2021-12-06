@@ -30,6 +30,7 @@ const Info = () => {
         <p className={descriptionStyle}>
           An experiment in generative art created by{" "}
           <a
+            rel="noreferrer"
             className="text-blue-800 hover:underline uppercase"
             href="https://gulaganthem.com"
             target="_blank"
