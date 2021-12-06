@@ -29,9 +29,16 @@ const Info = () => {
         Press the Generate button to create an art piece through the{" "}
         {umbrellaTag} algorithm.
       </p>
-      <p className={descriptionStyle}>
+      <p className={`${descriptionStyle}`}>
         No two generations are the same. Enjoy.
       </p>
+      <a href="/" target="_blank">
+        <p
+          className={`${descriptionStyle} text-blue-800 hover:underline inline-block`}
+        >
+          10 piece collection available on OpenSea.
+        </p>
+      </a>
       <button onClick={newCanvas} className={buttonStyles}>
         <p className={buttonPTags}>Generate</p>
       </button>

@@ -1,6 +1,5 @@
-import { useState } from "react";
 import Sketch from "react-p5";
-import Info from "./Info";
+import { useState } from "react";
 
 const Canvas = () => {
   let canvasWidth =
@@ -19,7 +18,7 @@ const Canvas = () => {
   // state that holds types and quantities of shapes to be painted on canvas
   const [values] = useState([
     { type: "rectangle", count: 100000 },
-    { type: "line", count: getRandNum(50, 250) },
+    { type: "line", count: getRandNum(50, 500) },
     { type: "circle", count: getRandNum(50, 125) },
   ]);
 
@@ -81,15 +80,7 @@ const Canvas = () => {
     });
   };
 
-  return (
-    <div
-      id="canvasContainer"
-      className="mx-auto flex justify-center mt-14 px-20 b675:flex-col"
-    >
-      <Sketch className="pr-10 b675:pr-0" setup={setup} draw={draw} />
-      <Info />
-    </div>
-  );
+  return <Sketch className="pr-10 b675:pr-0" setup={setup} draw={draw} />;
 };
 
 export default Canvas;
