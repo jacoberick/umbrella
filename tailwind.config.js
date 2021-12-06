@@ -33,6 +33,7 @@ module.exports = {
       fontFamily: {
         source: ["Source Sans Pro", "sans-serif"],
         maven: ["Maven Pro", "sans-serif"],
+        jSans: ["Josefin Sans", "sans-serif"],
       },
     },
   },
