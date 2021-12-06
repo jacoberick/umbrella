@@ -3,7 +3,9 @@ import { useState } from "react";
 
 const Canvas = () => {
   let canvasWidth =
-    window.innerWidth > 675 ? window.innerWidth * 0.3 : window.innerWidth * 0.9;
+    window.innerWidth > 675
+      ? window.innerWidth * 0.35
+      : window.innerWidth * 0.9;
   let canvasHeight = canvasWidth + canvasWidth * 0.4;
 
   // returns random number between min and max params
@@ -35,7 +37,7 @@ const Canvas = () => {
       if (canvasWidth !== window.innerWidth * 0.3) {
         canvasWidth =
           window.innerWidth > 675
-            ? window.innerWidth * 0.3
+            ? window.innerWidth * 0.35
             : window.innerWidth * 0.9;
         canvasHeight = canvasWidth + canvasWidth * 0.4;
         windowResized();

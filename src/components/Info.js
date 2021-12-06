@@ -22,9 +22,9 @@ const Info = () => {
   };
 
   return (
-    <div className="ml-10 b675:pl-0 text-black font-source max-w-xl b675:mt-6">
+    <div className="ml-10 b675:pl-0 text-black font-source max-w-xl b675:mt-6 b675:ml-0">
       <div className="">
-        <h1 className="b1000:text-2xl b750:text-xl mb-8">
+        <h1 className="b1000:text-5xl b850:text-3xl b750:text-xl mb-8">
           Welcome to {umbrellaTag}.
         </h1>
         <p className={descriptionStyle}>
