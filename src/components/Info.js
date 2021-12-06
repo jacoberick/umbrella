@@ -22,7 +22,7 @@ const Info = () => {
   };
 
   return (
-    <div className="pl-10 b675:pl-0 text-black font-noto max-w-xl b675:mt-12">
+    <div className="pl-10 b675:pl-0 text-black font-noto max-w-xl b675:mt-6">
       <h1 className="b1000:text-2xl b750:text-xl">Welcome to {umbrellaTag}.</h1>
       <p className={descriptionStyle}>An experiment in generative art.</p>
       <p className={descriptionStyle}>
