@@ -4,7 +4,7 @@ const Info = () => {
   );
 
   const buttonStyles =
-    "w-full mb-8 border-2 py-2 hover:shadow-hardline transition rounded-sm duration-200 border-black text-black";
+    "w-full mb-8 border-2 py-2 hover:shadow-hardline transition rounded-sm duration-200 border-gray-900 text-gray-900";
 
   const buttonPTags =
     "b850:text-sm b750:text-xs font-rbto uppercase text-base ";
@@ -23,7 +23,7 @@ const Info = () => {
   };
 
   return (
-    <div className="ml-10 b675:pl-0 text-black font-source max-w-xl b675:mt-6 b675:ml-0">
+    <div className="ml-10 b675:pl-0 text-gray-900 font-source max-w-xl b675:mt-6 b675:ml-0">
       <div className="">
         <h1 className="b1000:text-5xl b850:text-3xl b750:text-xl mb-8">
           Welcome to {umbrellaTag}.

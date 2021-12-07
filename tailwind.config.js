@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
@@ -22,13 +24,14 @@ module.exports = {
         rainbowFlash: "rainbowFlash 3s infinite linear",
       },
       screens: {
+        b1250: { max: "1250px" },
         b1000: { max: "1000px" },
         b850: { max: "850px" },
         b750: { max: "750px" },
         b675: { max: "675px" },
       },
       colors: {
-        black: "#121212",
+        gray: colors.trueGray,
       },
       fontFamily: {
         source: ["Source Sans Pro", "sans-serif"],

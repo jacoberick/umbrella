@@ -1,8 +1,9 @@
 const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   const umbrellaTag = <span className="font-maven uppercase">Umbrella</span>;
-  const linkStyle = "text-blue-800 hover:underline";
+  const linkStyle = "text-blue-500 hover:underline";
   const gaTag = <span className="uppercase">gulag anthem</span>;
-  const iconStyle = "text-black text-2xl mr-6";
+  const iconStyle = "text-gray-200 text-2xl mx-6";
+  const pTagDropShadow = " shadow-2xl p-5 rounded";
   const iconTemplate = (specifiedIcon, link) => {
     return (
       <a rel="noreferrer" href={link} target="_blank" className={iconStyle}>
@@ -16,7 +17,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   };
 
   return (
-    <div id="aboutContainer" className="bg-black pb-14">
+    <div id="aboutContainer" className="bg-gray-900 pb-14">
       <div id="aboutInner" className="max-w-7xl mx-auto px-20 py-14">
         <h1 className="font-rbto text-white">
           About{" "}
@@ -26,7 +27,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
         </h1>
         <div
           id="aboutContent"
-          className="mt-14 flex justify-center bg-gray-200 py-10 rounded px-10"
+          className="mt-14 flex justify-center bg-gray-800 py-10 rounded px-10"
         >
           <div className="w-1/2 mr-10">
             <img
@@ -35,8 +36,8 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               className="w-full h-auto rounded mr-10"
             />
           </div>
-          <section className="ml-10 text-black w-1/2">
-            <p className="mb-8">
+          <section className="ml-10 text-gray-200 w-1/2">
+            <p className={`${pTagDropShadow} mb-8`}>
               {umbrellaTag} is the first generative art project from digital
               artist {gaTag}. The {umbrellaTag} algorithm uses a react
               integration of{" "}
@@ -62,7 +63,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               behind closed doors, but will be open-source in the near future
               for alteration and collaboration.
             </p>
-            <p>
+            <p className={pTagDropShadow}>
               For updates on the {umbrellaTag} project, follow {gaTag} on{" "}
               <a
                 rel="noreferrer"
@@ -74,7 +75,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               </a>
               . Those who do not build must burn.
             </p>
-            <div className="mt-4">
+            <div className="mt-8 flex justify-center">
               {iconTemplate(
                 faInstagram,
                 "https://www.instagram.com/gulaganthem/"

@@ -1,10 +1,10 @@
 const Header = ({ FontAwesomeIcon, faUmbrella }) => {
   return (
-    <div className="border-b border-black">
+    <div className="border-b border-gray-900">
       <header className="flex justify-center items-center py-4">
         <FontAwesomeIcon
           id="logo"
-          className="text-xl text-black animate-rainbowFlash hover:animate-bounce"
+          className="text-xl text-gray-900 animate-rainbowFlash hover:animate-bounce"
           icon={faUmbrella}
         />
       </header>
