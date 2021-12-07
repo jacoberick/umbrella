@@ -18,7 +18,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   return (
     <div id="aboutContainer" className="bg-black pb-14">
       <div id="aboutInner" className="max-w-7xl mx-auto px-20 py-14">
-        <h1 className="font-source text-white">
+        <h1 className="font-rbto text-white">
           About{" "}
           <span className={`font-maven uppercase animate-rainbowFlash`}>
             umbrella
@@ -58,7 +58,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
                 here
               </a>
               . {umbrellaTag} derives its name from the processes the algorithm
-              uses to generate its unique images. For now, the algorithm is
+              employs to generate its unique images. For now, the algorithm is
               behind closed doors, but will be open-source in the near future
               for alteration and collaboration.
             </p>

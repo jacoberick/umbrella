@@ -6,9 +6,10 @@ const Info = () => {
   const buttonStyles =
     "w-full mb-8 border-2 py-2 hover:shadow-hardline transition rounded-sm duration-200 border-black text-black";
 
-  const descriptionStyle = "b850:text-sm b750:text-xs";
+  const buttonPTags =
+    "b850:text-sm b750:text-xs font-rbto uppercase text-base ";
 
-  const buttonPTags = "b850:text-sm b750:text-xs font-source uppercase";
+  const descriptionStyle = "b850:text-sm b750:text-xs";
 
   // better way to reset canvas needs to be made here
   const newCanvas = () => {
@@ -40,9 +41,9 @@ const Info = () => {
           .
         </p>
         <p className={descriptionStyle}>
-          Press the <span className="uppercase">Generate</span> button to create
-          an art piece through the {umbrellaTag} algorithm. No two generations
-          are the same. Enjoy.
+          Press the <span className="uppercase font-rbto">Generate</span> button
+          to create an art piece through the {umbrellaTag} algorithm. No two
+          generations are the same. Enjoy.
         </p>
         <a href="/" target="_blank">
           <p

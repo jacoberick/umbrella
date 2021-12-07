@@ -4,8 +4,7 @@
 @tailwind utilities;
 
 /* fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Maven+Pro&family=Source+Sans+Pro&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Maven+Pro&family=Roboto+Mono&family=Source+Sans+Pro&display=swap");
 /* base layer styles */
 @layer base {
   h1 {
