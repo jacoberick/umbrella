@@ -3,7 +3,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   const linkStyle = "text-blue-500 hover:underline";
   const gaTag = <span className="uppercase">gulag anthem</span>;
   const iconStyle = "text-gray-200 text-2xl mx-6";
-  const pTagDropShadow = " shadow-2xl p-5 rounded";
+  const pTagDropShadow = "shadow-coldwar p-5 rounded border-4 border-gray-700";
   const iconTemplate = (specifiedIcon, link) => {
     return (
       <a rel="noreferrer" href={link} target="_blank" className={iconStyle}>
@@ -18,8 +18,8 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
 
   return (
     <div id="aboutContainer" className="bg-gray-900 pb-14">
-      <div id="aboutInner" className="max-w-7xl mx-auto px-20 py-14">
-        <h1 className="font-rbto text-white">
+      <div id="aboutInner" className="max-w-7xl mx-auto px-20 py-14 b675:px-6">
+        <h1 className="font-rbto text-white b1000:text-6xl b850:text-5xl">
           About{" "}
           <span className={`font-maven uppercase animate-rainbowFlash`}>
             umbrella
@@ -27,16 +27,16 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
         </h1>
         <div
           id="aboutContent"
-          className="mt-14 flex justify-center bg-gray-800 py-10 rounded px-10"
+          className="mt-14 flex justify-center items-center bg-gray-800 py-10 rounded px-10 b1000:flex-col b675:px-6"
         >
-          <div className="w-1/2 mr-10">
+          <div className="w-1/2 mr-10 b1250:mr-5 b1000:mr-0 b1000:w-3/4 b750:w-full">
             <img
               src="./assets/yuri.jpg"
               alt="yuri"
-              className="w-full h-auto rounded mr-10"
+              className="w-full h-auto rounded shadow-coldwar border-4 border-gray-700"
             />
           </div>
-          <section className="ml-10 text-gray-200 w-1/2">
+          <section className="ml-10 text-gray-200 w-1/2 b1250:ml-5 b1000:ml-0 b1000:mt-8 b1000:w-3/4 b750:w-full">
             <p className={`${pTagDropShadow} mb-8`}>
               {umbrellaTag} is the first generative art project from digital
               artist {gaTag}. The {umbrellaTag} algorithm uses a react

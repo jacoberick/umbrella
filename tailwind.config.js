@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        hardline: "-5px 5px #121212",
+        hardline: "-5px 5px #171717",
+        coldwar: "-8px 8px #171717",
       },
       keyframes: {
         rainbowFlash: {
