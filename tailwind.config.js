@@ -30,6 +30,7 @@ module.exports = {
         b850: { max: "850px" },
         b750: { max: "750px" },
         b675: { max: "675px" },
+        b440: { max: "440px" },
       },
       colors: {
         gray: colors.trueGray,

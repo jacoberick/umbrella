@@ -5,6 +5,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   const iconStyle = "text-gray-200 text-2xl mx-6";
   const pTagDropShadow = "shadow-coldwar p-5 rounded border-4 border-gray-700";
   const descriptionStyle = "b850:text-sm b750:text-xs";
+
   const iconTemplate = (specifiedIcon, link) => {
     return (
       <a rel="noreferrer" href={link} target="_blank" className={iconStyle}>
@@ -28,7 +29,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
         </h1>
         <div
           id="aboutContent"
-          className="mt-14 flex justify-center items-center bg-gray-800 py-10 rounded px-10 b1000:flex-col b675:px-6"
+          className="mt-14 flex justify-center items-center bg-gray-800 py-10 rounded px-10 b1000:flex-col b675:px-6 b675:py-5"
         >
           <div className="w-1/2 mr-10 b1250:mr-5 b1000:mr-0 b1000:w-3/4 b750:w-full">
             <img
@@ -90,7 +91,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
                 target="_blank"
               >
                 <p
-                  className={`${descriptionStyle} transition transform hover:scale-125 font-jSans inline-block text-2xl`}
+                  className={`transition transform hover:scale-125 font-jSans inline-block text-2xl`}
                 >
                   GA
                 </p>
