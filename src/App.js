@@ -5,7 +5,12 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCreativeCommons,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 const App = () => {
   return (
@@ -17,7 +22,10 @@ const App = () => {
         faInstagram={faInstagram}
         faTwitter={faTwitter}
       />
-      <Footer />
+      <Footer
+        FontAwesomeIcon={FontAwesomeIcon}
+        faCreativeCommons={faCreativeCommons}
+      />
     </div>
   );
 };

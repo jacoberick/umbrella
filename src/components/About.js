@@ -74,7 +74,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               >
                 twitter
               </a>
-              . Those who do not build must burn.
+              .
             </p>
             <div className="mt-8 flex justify-center">
               {iconTemplate(
