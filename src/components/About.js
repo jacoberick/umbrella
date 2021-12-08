@@ -64,7 +64,8 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               for alteration and collaboration.
             </p>
             <p className={pTagDropShadow}>
-              For updates on the {umbrellaTag} project, follow {gaTag} on{" "}
+              Generated images are free for non-commercial use. For updates on
+              the {umbrellaTag} project, follow {gaTag} on{" "}
               <a
                 rel="noreferrer"
                 target="_blank"
