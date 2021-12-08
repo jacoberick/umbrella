@@ -4,6 +4,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   const gaTag = <span className="uppercase">gulag anthem</span>;
   const iconStyle = "text-gray-200 text-2xl mx-6";
   const pTagDropShadow = "shadow-coldwar p-5 rounded border-4 border-gray-700";
+  const descriptionStyle = "b850:text-sm b750:text-xs";
   const iconTemplate = (specifiedIcon, link) => {
     return (
       <a rel="noreferrer" href={link} target="_blank" className={iconStyle}>
@@ -31,13 +32,13 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
         >
           <div className="w-1/2 mr-10 b1250:mr-5 b1000:mr-0 b1000:w-3/4 b750:w-full">
             <img
-              src="./assets/yuri.jpg"
+              src="/assets/yuri.jpg"
               alt="yuri"
               className="w-full h-auto rounded shadow-coldwar border-4 border-gray-700"
             />
           </div>
           <section className="ml-10 text-gray-200 w-1/2 b1250:ml-5 b1000:ml-0 b1000:mt-8 b1000:w-3/4 b750:w-full">
-            <p className={`${pTagDropShadow} mb-8`}>
+            <p className={`${pTagDropShadow} ${descriptionStyle} mb-8`}>
               {umbrellaTag} is the first generative art project from digital
               artist {gaTag}. The {umbrellaTag} algorithm uses a react
               integration of{" "}
@@ -63,7 +64,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
               behind closed doors, but will be open-source in the near future
               for alteration and collaboration.
             </p>
-            <p className={pTagDropShadow}>
+            <p className={`${pTagDropShadow} ${descriptionStyle}`}>
               Generated images are free for non-commercial use. For updates on
               the {umbrellaTag} project, follow {gaTag} on{" "}
               <a
@@ -88,7 +89,9 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
                 href="https://gulaganthem.com"
                 target="_blank"
               >
-                <p className="transition transform hover:scale-125 font-jSans inline-block text-2xl">
+                <p
+                  className={`${descriptionStyle} transition transform hover:scale-125 font-jSans inline-block text-2xl`}
+                >
                   GA
                 </p>
               </a>

@@ -23,24 +23,28 @@ const Canvas = () => {
   ]);
 
   const setup = (p5, canvasParentRef) => {
-    p5.pixelDensity(10);
+    p5.pixelDensity(5);
     p5.createCanvas(canvasWidth, canvasHeight).parent(canvasParentRef);
     p5.noLoop();
     p5.noStroke();
 
-    const windowResized = () => {
-      p5.resizeCanvas(canvasWidth, canvasHeight);
-      p5.noStroke();
+    const changeCanvasWidth = (multiplier) => {
+      if (
+        window.innerWidth > canvasWidth / multiplier + 10 ||
+        window.innerWidth < canvasWidth / multiplier - 10
+      ) {
+        canvasWidth = window.innerWidth * multiplier;
+        canvasHeight = canvasWidth + canvasWidth * 0.4;
+        p5.resizeCanvas(canvasWidth, canvasHeight);
+        p5.noStroke();
+      }
     };
 
     window.addEventListener("resize", () => {
-      if (canvasWidth !== window.innerWidth * 0.3) {
-        canvasWidth =
-          window.innerWidth > 675
-            ? window.innerWidth * 0.35
-            : window.innerWidth * 0.9;
-        canvasHeight = canvasWidth + canvasWidth * 0.4;
-        windowResized();
+      if (window.innerWidth > 675) {
+        changeCanvasWidth(0.35);
+      } else {
+        changeCanvasWidth(0.9);
       }
     });
   };
