@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/%7Brepo-name%7D/static/css/main.4ec6cd32.chunk.css",
-    "main.js": "/%7Brepo-name%7D/static/js/main.7ddc1fa1.chunk.js",
-    "main.js.map": "/%7Brepo-name%7D/static/js/main.7ddc1fa1.chunk.js.map",
-    "runtime-main.js": "/%7Brepo-name%7D/static/js/runtime-main.93944f40.js",
-    "runtime-main.js.map": "/%7Brepo-name%7D/static/js/runtime-main.93944f40.js.map",
-    "static/js/2.6c38e258.chunk.js": "/%7Brepo-name%7D/static/js/2.6c38e258.chunk.js",
-    "static/js/2.6c38e258.chunk.js.map": "/%7Brepo-name%7D/static/js/2.6c38e258.chunk.js.map",
-    "static/js/3.a01a9d1f.chunk.js": "/%7Brepo-name%7D/static/js/3.a01a9d1f.chunk.js",
-    "static/js/3.a01a9d1f.chunk.js.map": "/%7Brepo-name%7D/static/js/3.a01a9d1f.chunk.js.map",
-    "index.html": "/%7Brepo-name%7D/index.html",
-    "static/css/main.4ec6cd32.chunk.css.map": "/%7Brepo-name%7D/static/css/main.4ec6cd32.chunk.css.map",
-    "static/js/2.6c38e258.chunk.js.LICENSE.txt": "/%7Brepo-name%7D/static/js/2.6c38e258.chunk.js.LICENSE.txt"
+    "main.css": "/umbrella/static/css/main.4ec6cd32.chunk.css",
+    "main.js": "/umbrella/static/js/main.7ddc1fa1.chunk.js",
+    "main.js.map": "/umbrella/static/js/main.7ddc1fa1.chunk.js.map",
+    "runtime-main.js": "/umbrella/static/js/runtime-main.bf9fd6ce.js",
+    "runtime-main.js.map": "/umbrella/static/js/runtime-main.bf9fd6ce.js.map",
+    "static/js/2.6c38e258.chunk.js": "/umbrella/static/js/2.6c38e258.chunk.js",
+    "static/js/2.6c38e258.chunk.js.map": "/umbrella/static/js/2.6c38e258.chunk.js.map",
+    "static/js/3.a01a9d1f.chunk.js": "/umbrella/static/js/3.a01a9d1f.chunk.js",
+    "static/js/3.a01a9d1f.chunk.js.map": "/umbrella/static/js/3.a01a9d1f.chunk.js.map",
+    "index.html": "/umbrella/index.html",
+    "static/css/main.4ec6cd32.chunk.css.map": "/umbrella/static/css/main.4ec6cd32.chunk.css.map",
+    "static/js/2.6c38e258.chunk.js.LICENSE.txt": "/umbrella/static/js/2.6c38e258.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.93944f40.js",
+    "static/js/runtime-main.bf9fd6ce.js",
     "static/js/2.6c38e258.chunk.js",
     "static/css/main.4ec6cd32.chunk.css",
     "static/js/main.7ddc1fa1.chunk.js"
