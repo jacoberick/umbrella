@@ -32,7 +32,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
         >
           <div className="w-1/2 mr-10 b1250:mr-5 b1000:mr-0 b1000:w-3/4 b750:w-full">
             <img
-              src="/assets/yuri.jpg"
+              src="./assets/yuri.jpg"
               alt="yuri"
               className="w-full h-auto rounded shadow-coldwar border-4 border-gray-700"
             />
