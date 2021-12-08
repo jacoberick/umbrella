@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/umbrella/static/css/main.4ec6cd32.chunk.css",
-    "main.js": "/umbrella/static/js/main.626ecb43.chunk.js",
-    "main.js.map": "/umbrella/static/js/main.626ecb43.chunk.js.map",
+    "main.css": "/umbrella/static/css/main.45e867a4.chunk.css",
+    "main.js": "/umbrella/static/js/main.c42efb06.chunk.js",
+    "main.js.map": "/umbrella/static/js/main.c42efb06.chunk.js.map",
     "runtime-main.js": "/umbrella/static/js/runtime-main.bf9fd6ce.js",
     "runtime-main.js.map": "/umbrella/static/js/runtime-main.bf9fd6ce.js.map",
     "static/js/2.6c38e258.chunk.js": "/umbrella/static/js/2.6c38e258.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.a01a9d1f.chunk.js": "/umbrella/static/js/3.a01a9d1f.chunk.js",
     "static/js/3.a01a9d1f.chunk.js.map": "/umbrella/static/js/3.a01a9d1f.chunk.js.map",
     "index.html": "/umbrella/index.html",
-    "static/css/main.4ec6cd32.chunk.css.map": "/umbrella/static/css/main.4ec6cd32.chunk.css.map",
+    "static/css/main.45e867a4.chunk.css.map": "/umbrella/static/css/main.45e867a4.chunk.css.map",
     "static/js/2.6c38e258.chunk.js.LICENSE.txt": "/umbrella/static/js/2.6c38e258.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bf9fd6ce.js",
     "static/js/2.6c38e258.chunk.js",
-    "static/css/main.4ec6cd32.chunk.css",
-    "static/js/main.626ecb43.chunk.js"
+    "static/css/main.45e867a4.chunk.css",
+    "static/js/main.c42efb06.chunk.js"
   ]
 }
