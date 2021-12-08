@@ -11,6 +11,8 @@ const Info = () => {
 
   const descriptionStyle = "b850:text-sm b750:text-xs";
 
+  const linkStyle = "text-blue-800 hover:underline";
+
   // better way to reset canvas needs to be made here
   const newCanvas = () => {
     window.location.reload();
@@ -25,14 +27,14 @@ const Info = () => {
   return (
     <div className="ml-10 b675:pl-0 text-gray-900 font-source max-w-xl b675:mt-6 b675:ml-0">
       <div className="">
-        <h1 className="b1000:text-5xl b850:text-3xl b750:text-xl mb-8">
+        <h1 className="b1000:text-5xl b850:text-3xl b750:text-xl mb-8 b1000:mb-4">
           Welcome to {umbrellaTag}.
         </h1>
         <p className={descriptionStyle}>
           An experiment in generative art created by{" "}
           <a
             rel="noreferrer"
-            className="text-blue-800 hover:underline uppercase"
+            className={`${linkStyle} uppercase`}
             href="https://gulaganthem.com"
             target="_blank"
           >
@@ -45,9 +47,22 @@ const Info = () => {
           to create an art piece through the {umbrellaTag} algorithm. No two
           generations are the same. Enjoy.
         </p>
+
+        <p className={`${descriptionStyle} mt-4`}>
+          Share your generations with{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/search?q=umbrellaNFT"
+            className={`font-maven ${linkStyle}`}
+          >
+            #umbrellaNFT
+          </a>
+          .
+        </p>
         <a href="/" target="_blank">
           <p
-            className={`${descriptionStyle} text-blue-800 hover:underline inline-block my-8`}
+            className={`${descriptionStyle} ${linkStyle} inline-block mt-4 mb-8 b1000:mb-4`}
           >
             10 piece NFT collection available on OpenSea.
           </p>
