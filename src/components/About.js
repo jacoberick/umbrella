@@ -61,9 +61,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
                 here
               </a>
               . {umbrellaTag} derives its name from the processes the algorithm
-              employs to generate its unique images. For now, the algorithm is
-              behind closed doors, but will be open-source in the near future
-              for alteration and collaboration.
+              employs to generate its unique images.
             </p>
             <p className={`${pTagDropShadow} ${descriptionStyle}`}>
               Generated images are free for non-commercial use. For updates on

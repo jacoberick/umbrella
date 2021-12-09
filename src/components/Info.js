@@ -60,7 +60,7 @@ const Info = () => {
           </a>
           .
         </p>
-        <a href="/" target="_blank">
+        <a href="https://opensea.io/collection/umbrella-code" target="_blank">
           <p
             className={`${descriptionStyle} ${linkStyle} inline-block mt-4 mb-8 b1000:mb-4`}
           >
