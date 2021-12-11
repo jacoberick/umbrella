@@ -2,6 +2,7 @@ import Sketch from "react-p5";
 import { useState } from "react";
 
 const Canvas = () => {
+  // declare initial canvas height and width
   let canvasWidth =
     window.innerWidth > 675
       ? window.innerWidth * 0.35
@@ -22,12 +23,14 @@ const Canvas = () => {
     { type: "star", count: getRandNum(50, 125) },
   ]);
 
+  // setup for p5 canvas
   const setup = (p5, canvasParentRef) => {
     p5.pixelDensity(5);
     p5.createCanvas(canvasWidth, canvasHeight).parent(canvasParentRef);
     p5.noLoop();
     p5.noStroke();
 
+    // function to handle resize
     const changeCanvasWidth = (multiplier) => {
       if (
         window.innerWidth > canvasWidth / multiplier + 10 ||
@@ -40,6 +43,7 @@ const Canvas = () => {
       }
     };
 
+    // runs on window resize
     window.addEventListener("resize", () => {
       if (window.innerWidth > 675) {
         changeCanvasWidth(0.35);
@@ -52,7 +56,7 @@ const Canvas = () => {
   const draw = (p5) => {
     p5.background("#121212");
 
-    //circles
+    //  loops through values state and draws it based on determined parameters within values
     values.forEach((x) => {
       for (let i = 0; i <= x.count; i++) {
         let xCord = getRandNum(0, canvasWidth);
