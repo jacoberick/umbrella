@@ -1,6 +1,7 @@
 import Info from "./Info";
 import Canvas from "./Canvas";
 
+// Main page consisting of Canvas and Info components
 const Main = () => {
   return (
     <div
