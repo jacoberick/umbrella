@@ -6,6 +6,7 @@ const About = ({ FontAwesomeIcon, faInstagram, faTwitter }) => {
   const pTagDropShadow = "shadow-coldwar p-5 rounded border-4 border-gray-700";
   const descriptionStyle = "b850:text-sm b750:text-xs";
 
+  // templating function for icons
   const iconTemplate = (specifiedIcon, link) => {
     return (
       <a rel="noreferrer" href={link} target="_blank" className={iconStyle}>
