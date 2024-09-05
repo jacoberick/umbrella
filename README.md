@@ -4,10 +4,6 @@ UMBRELLA is an algorithm that uses the p5.js library to generate unique art.\
 Generations can be downloaded. Please share your outputs with [#umbrellaNFT](https://twitter.com/search?q=umbrellaNFT)!
 Enjoy.
 
-## Live!
-
-https://umbrellacode.xyz
-
 ## To run locally...
 
 `npm install`\
